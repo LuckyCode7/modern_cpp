@@ -1,24 +1,24 @@
-CC = g++
-FLAGS = -c -Wall -Wpedantic -Wextra -Werror
+CXX = g++
+CXXFLAGS = -c -g -Wall -Wpedantic -Wextra -Werror
+OBJ = Circle.o Rectangle.o Shape.o Square.o main.o
 
-output: main.o square.o shape.o rectangle.o circle.o
-	$(CC) main.o Square.o Shape.o Rectangle.o Circle.o -o output
+output: $(OBJ)
+	$(CXX) $(OBJ) -o output
 
-main.o: Square.hpp Shape.hpp Rectangle.hpp Circle.hpp main.cpp
-	$(CC) $(FLAGS) main.cpp 
+main.o: main.cpp Square.hpp Shape.hpp Rectangle.hpp
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 square.o: Square.cpp Square.hpp
-	$(CC) $(FLAGS) Square.cpp  
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 shape.o: Shape.cpp Shape.hpp
-	$(CC) $(FLAGS) Shape.cpp 
- 
+	$(CXX) $(CXXFLAGS) $< -o $@
+
 rectangle.o: Rectangle.cpp Rectangle.hpp
-	$(CC) $(FLAGS) Rectangle.cpp  
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 circle.o: Circle.cpp Circle.hpp
-	$(CC) $(FLAGS) Circle.cpp  
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
 	rm *.o output
-
