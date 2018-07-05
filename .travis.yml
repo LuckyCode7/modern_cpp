@@ -1,3 +1,7 @@
-install: make get-deps
+dist: trusty
+sudo: false
 language: cpp
-compiler: g++
+
+script:
+    - cmake .
+    - cmake --build . -- -j2
