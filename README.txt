@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/LuckyCode7/modern_cpp.svg?branch=master)](https://travis-ci.org/LuckyCode7/modern_cpp)
+https://travis-ci.org/LuckyCode7/modern_cpp.svg?branch=master
 
 0. Compile and run the project
     > mkdir build
