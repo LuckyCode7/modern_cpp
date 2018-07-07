@@ -1,24 +1,18 @@
-CXX = g++
-CXXFLAGS = -c -g -Wall -Wpedantic -Wextra -Werror
-OBJ = Circle.o Rectangle.o Shape.o Square.o main.o
+CXX = g++ 
+CXXFLAGS = -Wall -Wpedantic -Wextra -Werror
+SRCS = $(wildcard *.cpp)
+OBJS = $(SRCS:.cpp=.o)
+TARGET = output
 
-output: $(OBJ)
-	$(CXX) $(OBJ) -o output
+.PHONY: all
+all: $(TARGET)
 
-main.o: main.cpp Square.hpp Shape.hpp Rectangle.hpp
-	$(CXX) $(CXXFLAGS) $< -o $@
+%.o: %.cpp %.hpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@   
 
-square.o: Square.cpp Square.hpp
-	$(CXX) $(CXXFLAGS) $< -o $@
+$(TARGET): $(OBJS)
+	$(CXX) $^ -o $@
 
-shape.o: Shape.cpp Shape.hpp
-	$(CXX) $(CXXFLAGS) $< -o $@
-
-rectangle.o: Rectangle.cpp Rectangle.hpp
-	$(CXX) $(CXXFLAGS) $< -o $@
-
-circle.o: Circle.cpp Circle.hpp
-	$(CXX) $(CXXFLAGS) $< -o $@
-
+.PHONY: clean
 clean:
-	rm *.o output
+	rm $(TARGET) *.o
