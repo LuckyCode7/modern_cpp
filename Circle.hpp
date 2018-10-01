@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Shape.hpp"
 
 class Circle : public Shape
@@ -12,9 +11,7 @@ public:
     double getPerimeter() const;
     double getRadius() const;
     void print() const;
-
+    Circle() = delete; // doesn't allow to call default constructor
 private:
-    Circle(); // doesn't allow to call default constructor
-
     double r_;
 };

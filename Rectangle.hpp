@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Shape.hpp"
 
 class Rectangle : public Shape
@@ -13,10 +12,8 @@ public:
     double getX() const;
     double getY() const;
     void print() const;
-
+    Rectangle() = delete;
 private:
-    Rectangle();
-
     double x_;
     double y_;
 };

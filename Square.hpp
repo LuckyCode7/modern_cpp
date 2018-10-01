@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Rectangle.hpp"
 
 class Square : public Rectangle
@@ -11,8 +10,6 @@ public:
     double getArea();
     double getPerimeter();
     void print();
-
-private:
-    double getY(); // should not have Y dimension
-    Square();
+    double getY() = delete; // should not have Y dimension
+    Square() = delete;
 };
