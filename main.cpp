@@ -39,22 +39,22 @@ auto areaLessThan10(Shape* s)
 
 void printCollectionElements(const Collection& collection)
 {
-    for(Collection::const_iterator it = collection.begin(); it != collection.end(); ++it)
+    for(const auto& it : collection)
     {
-        if(*it != nullptr)
+        if(it != nullptr)
         {
-            (*it)->print();
+            (it)->print();
         }
     }
 }
 
 void printAreas(const Collection& collection)
 {
-    for(vector<Shape*>::const_iterator it = collection.begin(); it != collection.end(); ++it)
+    for(const auto& it : collection)
     {
-        if(*it != nullptr)
+        if(it != nullptr)
         {
-            cout << (*it)->getArea() << std::endl;
+            cout << (it)->getArea() << std::endl;
         }
     }
 }
