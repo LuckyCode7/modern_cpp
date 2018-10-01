@@ -9,7 +9,7 @@ public:
 
     double getArea() const override;
     double getPerimeter() const override;
-    virtual double getX() const final;
+    virtual const double getX() const final;
     double getY() const;
     void print() const override;
     Rectangle() = delete;

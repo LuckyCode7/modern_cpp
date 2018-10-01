@@ -16,7 +16,7 @@ double Rectangle::getPerimeter() const
     return 2 * (x_ + y_);
 }
 
-double Rectangle::getX() const
+const double Rectangle::getX() const
 {
     return x_;
 }

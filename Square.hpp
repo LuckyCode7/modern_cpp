@@ -7,9 +7,9 @@ public:
     Square(double x);
     Square(const Square & other) = default;
 
-    double getArea() noexcept;
-    double getPerimeter() noexcept;
-    void print() noexcept;
+    double getArea() const noexcept override;
+    double getPerimeter() const noexcept override;
+    void print() const noexcept override;
     double getY() = delete; // should not have Y dimension
     Square() = delete;
 };
