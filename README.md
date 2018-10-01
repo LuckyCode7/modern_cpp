@@ -1,16 +1,3 @@
-[![Build Status](https://travis-ci.org/LuckyCode7/modern_cpp.svg?branch=master)](https://travis-ci.org/LuckyCode7/modern_cpp)
-
-0. Compile and run the project
-    > mkdir build
-    > cd build
-    > cmake ..
-    > make
-    > ./modern_cpp
-
-Check your g++ version by typing:
-    > g++ --version
-It should be >= 5.0
-
 1. static_assert:
     Assert that M_PI defined in math library in Circle.cpp file is not equal to 3.14
 2. nullptr:
