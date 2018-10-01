@@ -28,4 +28,9 @@ void Circle::print() const
               << "     perimeter: " << getPerimeter() << std::endl;
 }
 
+long double Circle::getPI()
+{
+    return M_PI;
+}
+
 //static_assert(M_PI == 3.14, "M_PI is not equal to 3.14");

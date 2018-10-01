@@ -12,6 +12,8 @@ public:
     double getRadius() const;
     void print() const override;
     Circle() = delete; // doesn't allow to call default constructor
+    [[deprecated("deprecated method")]]
+    static long double getPI();
 private:
     double r_;
 };
