@@ -5,17 +5,17 @@ Square::Square(double x)
     : Rectangle(x, x)
 {}
 
-double Square::getArea()
+double Square::getArea() noexcept
 {
     return getX() * getX();
 }
 
-double Square::getPerimeter()
+double Square::getPerimeter() noexcept
 {
     return 4 * getX();
 }
 
-void Square::print()
+void Square::print() noexcept
 {
     std::cout << "Square:      x: " << getX() << std::endl
               << "          area: " << getArea() << std::endl
