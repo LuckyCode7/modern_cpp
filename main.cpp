@@ -10,6 +10,13 @@
 using namespace std;
 using Collection = vector<Shape*>;
 
+constexpr int fib(const int& n)
+{
+    if(n ==1 || n==2)
+        return 1;
+    else return fib(n-2) + fib(n-1);
+}
+
 auto sortByArea(Shape* first, Shape* second)
 {
     if(first == nullptr || second == nullptr)
@@ -103,6 +110,7 @@ int main()
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");
 
     cout<<Circle::getPI()<<endl;
+    cout<<alignof(Circle)<<endl;
 
     return 0;
 }
