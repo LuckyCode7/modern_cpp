@@ -96,6 +96,10 @@ int main()
       make_shared<Circle>(4.0)
     };
 
+    auto temp = make_shared<Square>(Square(77));
+    //auto shape = move(temp);
+    shapes.push_back(move(temp));
+
     printCollectionElements(shapes);
 
     cout << "Areas before sort: " << std::endl;
@@ -105,8 +109,6 @@ int main()
 
     cout << "Areas after sort: " << std::endl;
     printAreas(shapes);
-
-    shapes.push_back(make_shared<Square>(4.0));
 
     findFirstShapeMatchingPredicate(shapes, perimeterBiggerThan20, "perimeter bigger than 20");
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");

@@ -1,0 +1,3 @@
+/home/lucky/Pulpit/modern_cpp/build/CMakeFiles/rebuild_cache.dir
+/home/lucky/Pulpit/modern_cpp/build/CMakeFiles/modern_cpp.dir
+/home/lucky/Pulpit/modern_cpp/build/CMakeFiles/edit_cache.dir
