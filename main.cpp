@@ -97,7 +97,6 @@ int main()
     };
 
     auto temp = make_shared<Square>(Square(77));
-    //auto shape = move(temp);
     shapes.push_back(move(temp));
 
     printCollectionElements(shapes);

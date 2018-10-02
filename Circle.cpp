@@ -6,6 +6,10 @@ Circle::Circle(double r)
     : r_(r)
 {}
 
+Circle::Circle(double r, Color c)
+    : Shape(c), r_(r)
+{}
+
 double Circle::getArea() const
 {
     return M_PI * r_ * r_;

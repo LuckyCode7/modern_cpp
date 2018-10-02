@@ -5,6 +5,7 @@ class alignas(128) Circle final : public Shape
 {
 public:
     Circle(double r);
+    Circle(double r, Color c);
     Circle(const Circle & other) = default;
 
     double getArea() const override;
